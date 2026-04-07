@@ -30,26 +30,65 @@
 
 <!-- HOME -->
 <section id="home">
-  <div class="home-inner">
-    <div class="home-badge">Available for OJT / Internship</div>
-    <h1 class="home-name">
-      <span class="line1">Arvin Roy</span>
-      <span class="line2">Jacaba</span>
-    </h1>
-    <p class="home-sub">
-      A <strong>4th-year Computer Science student</strong> at Arellano University, building games and web apps that people actually enjoy using.
-    </p>
-    <div class="home-btns">
-      <a href="#projects" class="btn-primary">
-        View My Work
-        <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <!-- CV Download — replace CV_JACABA.docx with the actual path to your CV file -->
-      <a href="CV_JACABA.docx" download="Arvin_Jacaba_CV.docx" class="btn-ghost">
-        <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download CV
-      </a>
+  <div class="home-layout">
+
+    <!-- LEFT: text -->
+    <div class="home-inner">
+      <div class="home-badge">Available for OJT / Internship</div>
+      <h1 class="home-name">
+        <span class="line1">Arvin Roy</span>
+        <span class="line2">Jacaba</span>
+      </h1>
+      <p class="home-sub">
+        A <strong>4th-year Computer Science student</strong> at Arellano University, building games and web apps that people actually enjoy using.
+      </p>
+      <div class="home-btns">
+        <a href="#projects" class="btn-primary">
+          View My Work
+          <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <!-- CV downloads the generated file placed in the same folder -->
+        <a href="CV_JACABA.docx" download="Arvin_Jacaba_CV.docx" class="btn-ghost">
+          <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+      </div>
     </div>
+
+    <!-- RIGHT: photo gallery slider -->
+    <div class="home-gallery">
+      <div class="gallery-track" id="galleryTrack">
+        <!--
+          ADD YOUR PHOTOS HERE.
+          Duplicate the <div class="gallery-slide"> block for each photo.
+          Replace src="arvin.jpg" with your actual image file paths.
+          All images must be in the same folder as index.html.
+        -->
+        <div class="gallery-slide active">
+          <img src="arvin.jpg" alt="Arvin Roy Jacaba" onerror="this.parentNode.style.background='linear-gradient(135deg,#1a4434,#0b2218)';this.style.display='none'">
+        </div>
+        <div class="gallery-slide">
+          <img src="arvin2.jpg" alt="Arvin Roy Jacaba" onerror="this.parentNode.style.background='linear-gradient(135deg,#2d1b4e,#1a0d2e)';this.style.display='none'">
+        </div>
+        <div class="gallery-slide">
+          <img src="arvin3.jpg" alt="Arvin Roy Jacaba" onerror="this.parentNode.style.background='linear-gradient(135deg,#0f3323,#091c14)';this.style.display='none'">
+        </div>
+        <div class="gallery-slide">
+          <img src="arvin4.jpg" alt="Arvin Roy Jacaba" onerror="this.parentNode.style.background='linear-gradient(135deg,#0f3323,#091c14)';this.style.display='none'">
+        </div>
+        <div class="gallery-slide">
+          <img src="arvin5.jpg" alt="Arvin Roy Jacaba" onerror="this.parentNode.style.background='linear-gradient(135deg,#0f3323,#091c14)';this.style.display='none'">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="gallery-btn gallery-prev" onclick="galleryPrev()" aria-label="Previous photo">&#8249;</button>
+      <button class="gallery-btn gallery-next" onclick="galleryNext()" aria-label="Next photo">&#8250;</button>
+
+      <!-- Dots -->
+      <div class="gallery-dots" id="galleryDots"></div>
+    </div>
+
   </div>
 </section>
 
