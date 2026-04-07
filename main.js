@@ -72,11 +72,11 @@ function animateBars() {
 
   /* Squeeze dot on mousedown, restore on mouseup */
   document.addEventListener('mousedown', () => {
-    dot.style.transform  = 'translate(-50%, -50%) scale(0.6)';
+    dot.style.transform  = 'translate(-50%, -50%) rotate(45deg) scale(0.6)';
     dot.style.background = 'var(--violet)';
   });
   document.addEventListener('mouseup', () => {
-    dot.style.transform  = 'translate(-50%, -50%) scale(1)';
+    dot.style.transform  = 'translate(-50%, -50%) rotate(45deg) scale(1)';
     dot.style.background = 'var(--pink)';
   });
 
@@ -105,7 +105,7 @@ function animateBars() {
   const interactables = 'a, button, [onclick], input, textarea, .gallery-btn, .tab-btn, .add-card';
   document.addEventListener('mouseover', e => {
     if (e.target.closest(interactables)) {
-      dot.style.transform  = 'translate(-50%, -50%) scale(1.6)';
+      dot.style.transform  = 'translate(-50%, -50%) rotate(45deg) scale(1.6)';
       dot.style.opacity    = '0.7';
       ring.style.borderColor = 'rgba(237,118,181,0.9)';
     }
